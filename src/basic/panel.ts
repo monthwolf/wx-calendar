@@ -120,7 +120,7 @@ export class PanelTool extends CalendarHandler {
     const sets: RefreshFields = { currView, info: getDateInfo(checked!, weekstart, isWeekView), checked, current };
     this.refreshPanels(sets);
 
-    instance.setData(sets);
+    //instance.setData(sets);
     await this.update();
   }
 
