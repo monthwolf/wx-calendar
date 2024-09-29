@@ -67,6 +67,7 @@ export class Pointer extends CalendarHandler {
     flush: boolean = false
   ): void {
     const instance = this._instance_;
+    this.show = true
     checked = checked || sets?.checked || instance.data.checked!;
     const current = sets?.current ?? instance.data.current;
     const panel: CalendarPanel = sets?.panels
@@ -79,7 +80,7 @@ export class Pointer extends CalendarHandler {
 
     if (sets?.pointer) {
       sets.pointer = { ...sets.pointer, x, y, show: this.show, animate: true };
-      instance.setData(sets);    } else if (sets) {
+      } else if (sets) {
       sets[`pointer.x`] = x;
       sets[`pointer.y`] = y;
       sets[`pointer.show`] = this.show;
