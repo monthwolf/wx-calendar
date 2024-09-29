@@ -79,18 +79,13 @@ export class Pointer extends CalendarHandler {
 
     if (sets?.pointer) {
       sets.pointer = { ...sets.pointer, x, y, show: this.show, animate: true };
-    } else if (sets) {
+      instance.setData(sets);    } else if (sets) {
       sets[`pointer.x`] = x;
       sets[`pointer.y`] = y;
       sets[`pointer.show`] = this.show;
       sets[`pointer.animate`] = !flush;
-    } else {
-      instance.setData({
-        [`pointer.x`]: x,
-        [`pointer.y`]: y,
-        [`pointer.show`]: this.show,
-        [`pointer.animate`]: !flush
       });
+      instance.setData(sets);
     }
   }
 
