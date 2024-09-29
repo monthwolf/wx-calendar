@@ -254,7 +254,7 @@ export class PanelTool extends CalendarHandler {
         const offset = monthDiff(pannel, { year: d.year, month: d.month });
         await this.refresh(offset, d, idx >= 0 ? idx : current);
       }
-      instance.trigger('change', { checked: d, source: 'manual' });
+      instance.trigger('change', { checked: d, source: 'click' });
     });
   }
 
