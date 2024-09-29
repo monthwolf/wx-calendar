@@ -220,7 +220,7 @@ Component<CalendarData, CalendarProp, CalendarMethod, CalendarCustomProp>({
 
       this._pointer_.update(sets);
       this._calendar_.service.dispatchEvent('attach', sets);
-
+      sets.pointer.show=true
       this.setData(sets);
       this._loaded_ = true;
 
